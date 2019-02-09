@@ -27,7 +27,7 @@ func main() {
 	opentracing.SetGlobalTracer(tracer)
 	defer closer.Close()
 
-	client, err := client.NewNSMClient(nil, nil)
+	client, err := client.NewNSMClientV2(nil, nil)
 	if err != nil {
 		logrus.Fatalf("Unable to create the NSM client %v", err)
 	}
